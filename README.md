@@ -8,7 +8,7 @@ Semantic segmentation is a computer vision task that involves classifying each p
 <h2>Step-by-step procedure: </h2>
 <h3>Dataset: </h3>
 The dataset used for this project is the Pets dataset from <a href="https://www.robots.ox.ac.uk/">Oxford IIIT website.</a> This dataset contains images of pet dogs and cats. These images are categorized by breeds and there are about 200 examples per category. Furthermore, with each image comes it's true masked image. These masked images are used as target labels and used to train a supervised learning model. In the dataset, there are in total 3680 training examples and 3669 test examples. Moreover, the dataset can be directly downloaded by using the tensorflow_datasets library. More information on the dataset can be found on the official site: <a href="https://www.robots.ox.ac.uk/~vgg/data/pets/">Pets Dataset.</a> This is one example image and it's mask from the dataset.
-<p><img src=""></p>
+<p><img src=".\Label.png"></p>
 
 <h3>Data Preprocessing: </h3>
 I preprocessed the data in three steps. First, I resized the images into a smaller 128 by 128 pixels. Then, I randomly picked images and flipped them left and right to generate more diverse data. Then, a common step in image processing before feeding them to a Neural Network is normalizing the pixels between -1 and 1 by dividing each pixel value by 255 (Max intensity value). The final dimensions of the input images is (128,128,3) and the true mask images is (128,128,1). Furthermore, I decided to split the data into Train-> 3680, Validation-> 3000 and Test-> 669 data points.
