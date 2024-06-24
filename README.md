@@ -24,7 +24,7 @@ Transpose Convolution is a very important concept if we want to build U-Nets. Ty
 
 <h3>U-net Architecture: </h3>
 Finally, we can use the above 2 concepts to build a U-Net architecture. The reason why it is called a U-Net is because the network looks like a "U". In a U-Net, in the left half, Convolutional Layers are implemented with MaxPooling Layers. This downsamples the images. This downsampling enables the network to learn about the features of the image in a much detailed level. However, due to this, we will lose the original size and large scale details of the image. That is why the right half of the U-net consists of Transpose Layers. These transpose layers upsample the output, and to retain the original properties of the image, some skip connections are added as you will see in the diagram of the U-Net.
-<p><img src=""></p>
+<p><img src="Unet-Model.png"></p>
 
 <h3>Output: </h3>
 Below are some of the masks that our U-net is able to produce.
